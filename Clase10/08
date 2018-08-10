@@ -1,6 +1,8 @@
 
 
 
+
+
 *# -*- coding: utf-8 -*-
 """
 Editor de Spyder
@@ -68,3 +70,16 @@ for i in range(10):
         print(-1)
         bandera=True
 
+*************
+import matplotlib.pyplot as plt
+n=100
+a,b=-1,1
+incremento=(b-a)/(n-1)
+
+vx=[a+incremento*i for i in range(n)]
+vy=[i*i for i in vx]
+
+plt.xlabel("eje a")
+plt.ylabel("el otro eje")
+plt.title("ejemplo")
+plt.plot(vx,vy)
