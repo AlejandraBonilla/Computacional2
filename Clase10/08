@@ -20,3 +20,35 @@ n=6
 for i in range(1,6):
     fac=i*fac
     print (fac)
+
+
+
+********************************
+import time
+
+
+def valsub(valor, mini, maxi, delta,sub):
+    if valor==maxi: return sub
+    else:
+        valor= int((valor-mini)/delta)+1
+        return valor
+
+lista=[]
+n=5
+sub=10
+for i in range(n):
+    val=input("dar numero ")
+    lista.append(float(val))
+    
+print (lista)
+maxi,mini=max(lista), min(lista)
+rango=abs(maxi-mini)
+delta=rango/sub
+
+#for i in range(sub):
+#    print(i*delta+mini)
+
+for i in range(len(lista)):
+    valsub(lista[i], mini, maxi, delta, sub)
+    print(valor)
+    time.sleep(2)
