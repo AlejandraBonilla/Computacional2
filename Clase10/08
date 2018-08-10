@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+
+
+
+*# -*- coding: utf-8 -*-
 """
 Editor de Spyder
 
@@ -52,3 +55,16 @@ for i in range(len(lista)):
     valsub(lista[i], mini, maxi, delta, sub)
     print(valor)
     time.sleep(2)
+    
+    
+    ******************bandera**************
+    bandera=True
+
+for i in range(10):
+    if bandera==True:
+        print(1)
+       bandera=False
+    else: 
+        print(-1)
+        bandera=True
+
