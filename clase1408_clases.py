@@ -33,3 +33,20 @@ class gato:
         self.energia +=1
         self.hambre +=3
         print ("extra")
+###################################################
+import random 
+     
+class detector:  
+    def __init__(self,energia,tiempo):
+        self.energia=energia
+        self.tiempo=tiempo
+        print ("detector activado")
+
+    def posicion(self,px,py):
+        if self.px >=0 or self.py >=0:
+            print ("dector+")
+        else:   
+         print ("detector-")
+        
+        
+   
