@@ -13,9 +13,6 @@ tol=0.001 #presición
 xi=20 #número de iteraciones
 i=0 #inicia el contador en 0
 
-#erp= error de 100; error deseado= 0.001
-erp=100
-err=0.01
 vciclos=[]
 verror=[]
 vv=0.5671
@@ -28,6 +25,8 @@ print('i', 'xi')
 while i<=xi:
     p=g(p0) #función evaluada en cada iteración
     print(i,p,abs(error(vv,p))) # imprime la iteración, i,  y la función evaluado en xi
+    vciclos.append(i)
+    verror.append(error(vv,p))
     if abs(p-p0)<tol:
         print("El punto fijo es ",p," despues de ",i," iteraciones", "con un error de",error(vv,p))
         break
@@ -35,6 +34,9 @@ while i<=xi:
     i=i+1
     p0=p
 
-plt.plot(i,error(vv,p))
+plt.plot(vciclos,verror)
+plt.title('Grácia de iteraciones vs error en el método del punto fijo')
+plt.xlabel('ciclos')
+plt.ylabel('error')
 plt.savefig('tarea4.png')
 plt.show()
