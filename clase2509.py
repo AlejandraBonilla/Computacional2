@@ -1,3 +1,5 @@
+import time 
+
 def cuadrado(x):
     return x*x
 
@@ -25,3 +27,13 @@ cmapeo2=map(lambda x:x*x,vx)
 #filter: es un filtro y da los valores que cumplen la condición "una manera reducida del ciclo for". 
 
 #reduce[lamnda x,y:x+y,vx] es igual a: 
+ht=[]
+vi=time.time()
+
+for j in range(1000): 
+    vi=time.time()
+    for i in range (10000000):
+        i=i+i        
+    vf=time.time()
+    ht.append(vf-vi)
+    print("termino",vf-vi)
